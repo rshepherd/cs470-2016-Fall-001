@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="description" content="Object-Oriented Programming">
+  <title>Object-Oriented Programming</title>
+  <link rel="stylesheet" href="primary.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div class="content">
+        <h1>Object-Oriented Programming</h1>
+        <h2>CSCI-UA.0470-001</h2>
+      </div> 
+    </div> 
+
+    <div id="navigation">
+      <div class="content">
+        <ol class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="protocols.html">Protocols & Policies</a></li>
+          <li><a href="week-by-week.html">Week-by-Week</a></li>
+          <li><a href="#" target="new">Piazza</a></li>
+          <li><a href="#" target="new">Github</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div id="main">
+   <div class="content">
+     <h3><u>Information</u></h3>
+     <p><strong>Meeting</strong>: Monday & Wednesday, 2:00PM-3:15PM in WWH 312</p>
+     <p><strong>Instructor</strong>: Randy Shepherd</p>
+     <p><strong>Email</strong>: rjs471 [at] nyu.edu</p>
+     <p><strong>Skype</strong>: randy.j.shepherd</p>
+     <p><strong>Office hours</strong>: Monday & Wednesday, 4:45PM-6:15PM in WWH 425</p>
+     <p><strong>Graders</strong>: TBD</p>
+
+     <h3><u>Description</u></h3>
+     <p> Object-oriented (OO) programming has emerged as a significant software development methodology. The goal of this course is to learn how to build and evolve large-scale programs using object-oriented programming. To this end, the course introduces the important concepts of object-oriented languages and design and explores how these concepts are implemented.</p>
+     <p><i>Prerequisites</i>: Computer Systems Organization (CSCI-UA 201).</p>
+     <p><i>Acknowledgments</i>: This course is based on the Object-Oriented Programming course designed by Robert Grimm. </p>
+     <h3><u>Objectives</u></h3>
+     <p> In exploring object-oriented programming, we investigate three questions:<br>
+       <ul>
+        <li><i>Design</i>: How do we think about a program in terms of objects? To answer this question, we explore the Pillars of OOP, S.O.L.I.D. and Design Patterns.</li>
+        <li><i>Language Primitives</i>: How do we express object orientation? To answer this question, we explore subjects including classes, polymorphism, inheritance, method dispatch and generics.</li>
+        <li><i>Language Implementation</i>: How do we realize object-oriented primitives? To answer this question, we explore subjects including virtual method dispatch and method overloading.</li>
+      </ul>
+    </p>
+
+    <h3><u>Textbooks</u></h3>
+    <p> Required:
+      <ul>
+        <li><a href="http://horstmann.com/design_and_patterns.html">Object-Oriented Design and Patterns, 2nd ed.</a> by Cay Horstmann, Wiley, 2005</li>
+        <li><a href="http://vig.prenhall.com:8081/catalog/academic/product/0,4096,013919424X,00.html">C++ for Java Programmers</a> by Mark Weiss, Prentice Hall, 2003</li>
+      </ul>
+    </p> 
+    <p> Suggested:
+      <ul>
+        <li><a href="http://www.stroustrup.com/4th.html">The C++ Programming Language, 4th ed.</a> by Bjarne Stroustrup, Addison-Wesley, 2015.</li>
+      </ul>
+    </p>
+
+    <h3><u>Project</u></h3>
+    <p>
+      The focus of our exploration of object-oriented programming is a translator from Java to C++. You design, implement, and evaluate your own translator as a term-long project, working in teams of four to five students. In fact, you build two versions of your translator, taking half a term for each version and presenting your work in class on completion of each version. To make the project manageable, your translator only translates a restricted subset of Java into an even more restricted subset of C++; though the second version covers more functionality than the first version. I also provide you with “helper” code, notably for parsing and formatting source files.
+    </p>
+    <p>
+      Each group selects a speaker, who coordinates with the members of the group and with me. A new speaker is elected at the middle of the term.
+    </p>
+    <p>
+      Your group’s midterm and final project presentations address three main issues:
+      <ul>
+        <li>What are the design and implementation of your translator?</li>
+        <li>How do you ensure that the translator meets the project requirements? Notably, how do you convince yourself and others that the translator actually works?</li>
+        <li>What was easy, hard, and/or surprising and how did that impact your translator?</li>
+      </ul>
+    </p>
+    <p>
+      You have a 12 minute slot for your presentation, which includes a demo of your translator and time to set up your laptop. 
+    </p>
+
+    <h3><u>Languages</u></h3>
+    <p>This course relies on three different programming languages:
+      <ul>
+        <li>The <em>source language</em> is the language of programs serving as inputs to the translator; it is a restricted version of Java.</li>
+        <li>The <em>target language</em> is the language of outputs of the translator; it is a restricted version of C++.</li>
+        <li>The <em>translator language</em> (for lack of a better term) is the language of the translator itself; it is the full Java 7.0 née JDK 1.7 language.</li>
+      </ul>
+    </p>
+
+    <p> In more detail, the <strong>source language</strong> is Java <em>without</em> nested classes, anonymous classes, interfaces, enums, annotations, generics, the enhanced forloop, varargs, and automatic boxing andunboxing. Furthermore, the source language omits support for synchronization, i.e., synchronized methods andstatements, and strict arithmetic operations, i.e. the<code>strictfp</code> modifier. It also omits support for <code>transient</code> and <code>volatile</code> fields as well as <code>native</code> methods. Finally, you may omit method overloading but not method overriding forthe first version of the translator. It also omits features new to Java 8, notably lambdas and functional interfaces.</p>
+
+    <p> The <strong>target language</strong> is C++ <em>without</em> virtual methods, inheritance, and, ingeneral, templates. It also omits features new to C++11, notably lambda abstractions and type inference, e.g., <code>auto</code> and <code>decltype</code>. It does, however, include gcc's statement expressions, i.e., <code>({ … })</code>. When compared to C, the target language does include support for basic classes, exceptions, and name spaces. For the first version of the translator, you can ignore memory management and assume an infinite main memory. For the second version of the translator, you need to automatically reclaim unused memory through a so-called smart pointer. The smart pointer library, as well as any library support for implementing Java arrays, may use templates.</p>
+
+    <p> Most Java statements and expressions translate directly into the corresponding C++ statements and expressions (modulo minor language differences). As a result, the <strong>main challenges</strong> for the course project are figuring out (1) how to translate Java class hierarchies into C++ without inheritance and (2) how to implement Java’s virtual method dispatch in C++ without virtual method dispatch, (3) how to select the right overloaded method, and (4) how to automatically manage memory without an existing garbage collector. Note that we will explore how to approach each challenge in class; we will also leave the latter two challenges for the second version of the translator.</p>
+
+    <p> Besides the programming language itself, any version of Java includes a rather extensive set of platform libraries, with the facilities in the <code>java.lang</code> package being tightly integrated with Java’s execution model. For our translator, we only support the <code>hashCode()</code>, <code>equals()</code>, and <code>toString()</code> methods in <code>java.lang.Object</code> and the printing of numbers and strings through <code>out.print()</code> and <code>out.println()</code> in <code>java.lang.System</code>. Also, some of the Class class. Furthermore, we do not support the dynamic loading of Java classes, but rather translate all Java classes of the source program into one C++ program.</p>
+
+    <p> Please note that the translator need not perform any correctness checks on source programs; in other words, you can assume that source programs are free of compile-time errors. At the same time, when writing your own Java test programs, it seems prudent to test them with a regular Java compiler.</p>
+
+    <h3><u>Tools and Resources</u></h3> 
+
+    <p> An important dimension to this course is to demonstrate how OOP is weilded in <strong>large scale</strong> software development projects. Towards that end we are using a very modern and sophisticated toolchain that would be similar to that used in a professional context. </p> 
+
+    <p> Note that <a href="https://github.com/nyu-oop">homework 1</a> provides a detailed guide on our toolchain and the installation thereof.</p>
+
+    <p> For Java, we use the Java 2 Platform Standard Edition 7.0, née JDK 1.7, or later. </p>  
+
+    <p> For C++, we use <a href="http://gcc.gnu.org/">gcc</a>, the GNU Compiler Collection, as our compiler. It is the default compiler for Linux and included with Apple’s Xcode for Mac OS X.  </p>  
+
+    <p> If you are running Windows, you will need to run a virtual machine. Again detailed instructions are in the homework 1.  </p>  
+
+    <p> Like any large-scale software projects, we rely on a build toolchain to compile, assemble, test and execute our project. In this course, we will use <a href="http://www.scala-sbt.org">SBT</a>. SBT is most well known for Scala projects, but it works equally well for Java projects. Between the built-in capabilities of SBT and the extensions I have created for it, many headaches you might typically be associated with working on large software projects should be ameliorated.</p>
+
+    <p> To simplify the task of reading source files in one language, translating them into another language, and then printing source files for that language, we use the <a href="http://cs.nyu.edu/rgrimm/xtc/">xtc toolkit for source-to-source translators</a>. xtc includes a parser for Java source files, which converts the external, textual representation into an internal tree representation. It also includes support for traversing, modifying, and pretty-printing such trees.  </p>
+
+  </div>
+
+  <div id="footer">
+    <div class="content">
+      <p>CSCI-UA CSCI-UA.0470-001 | Fall 2016 | New York University</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+/*
+Primary style sheet for course Web pages
+Joshua Clayton 
+modified by MJB
+*/
+
+@font-face {
+	font-family: Junction;
+	src:
+		url('fonts/Junction-webfont.ttf'),
+		url('fonts/Junction-webfont.eot'),
+		url('fonts/Junction-webfont.woff'),
+		url('fonts/Junction-webfont.svg');
+	}
+/* Web font from the League of Moveable Type */
+
+#header {
+	margin-top: 20px;
+	}
+	
+#navigation {
+	margin-top: 45px;
+/* 	border-top: 1px solid #ff0000; /* autumn red */
+	border-top: 1px solid #ed00ed; /* purple */
+	/* spring green #00ee00 */
+	}
+
+#main {
+	clear: both;
+	margin-top: 45px;
+	padding-top: 5px;
+/* 	border-top: 1px solid #d3d3d3; /* link active gray */
+	border-top: 1px solid #008fff; /* link greenish blue */
+	/* border-top: 1px solid #0000ff; /* link blue */
+	}
+	
+#footer {
+	margin-top: 45px;
+	margin-bottom: 40px;
+/* 	border-top: 1px solid #ff0000; /* autumn red */
+	border-top: 1px solid #ed00ed; /* purple */
+	}
+	
+.content {
+	width: 75%;
+	margin: 0px auto;
+	}
+
+h1 {
+	font-family: Junction, Helvetica, Arial, sans-serif;
+	color: black;
+	font-weight: normal;
+	text-align: left;
+	font-size: 1.5em;
+	line-height: 0.5em;
+	}
+
+h2 {
+	font-family: Junction, Helvetica, Arial, sans-serif;
+	color: black;
+	font-weight: normal;
+	text-align: left;
+	font-size: 1.3em;
+	line-height: 0.5em;
+	}
+
+h3, h4, h5, h6, th {
+	font-family: Junction, Helvetica, Arial, sans-serif;
+	color: black;
+	font-weight: normal;
+	text-align: left;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	}
+
+p, ul, ol, td {
+	font-family: Helvetica, Arial, sans-serif;
+	color: black;
+	font-weight: normal;
+	font-size: .9em;
+	line-height: 1.2em;
+	text-align: left;
+	}
+	
+code {
+	font-family: Menlo, Courier, monospace;
+	color: black;
+	font-weight: normal;
+	font-size: .9em;
+	line-height: 1.2em;
+	text-align: left;
+	}
+	
+table {
+	width: 100%;
+	}
+
+th {
+	height: 2.8em;
+	}
+
+td {
+	background-color: #d3d3d3;
+	padding: 5px;
+	font-size: .7em;
+	vertical-align: top;
+	}
+	
+#navigation ul, #navigation ol {
+	font-family: Junction, Helvetica, Arial, sans-serif;
+	list-style: none;
+	margin-top: 5px;
+	margin-left: 0;
+	padding-left: 0;
+	}
+	
+#navigation li {
+	float: left;
+	margin-right: 30px;
+	}
+	
+#navigation a {
+	text-decoration: none;
+	}
+		
+a:link {
+	#color: black;
+ 	color:#008fff; /* greenish blue */
+	text-decoration: underline;
+	}
+
+ a:visited {
+	#color: black;
+	color:#01018a;
+	text-decoration: underline;
+	}	
+
+a:focus, a:hover {
+	/* color: black;*/
+  color:  #ed00ed;
+	text-decoration: none;
+	}
+	
+a:active {
+	text-decoration: none;
+	background: #d3d3d3;
+	}
